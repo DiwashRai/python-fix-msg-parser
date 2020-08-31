@@ -2,7 +2,7 @@
 Tired of alt-tabbing to the [onixs FIX dictionary website](https://www.onixs.biz/fix-dictionary.html)?  
 Can't memorise all 1000 ish tags + extra custom ones? This script is just for you!
 
-python script that parses an input txt file fix message, parses it against a data dictionary and outputs it into an output txt file.  
+This python script takes fix messages from an input txt file, parses it, adds info from a  data dictionary and outputs it into an output txt file.  
 Useful if you don't want to put your message logs into a parsing website or if you need to use a custom data dictionary.
 
 Takes fix strings like this:
