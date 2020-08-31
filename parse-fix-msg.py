@@ -44,10 +44,10 @@ def init_fields():
             fields = child
 
 
-def get_enum_str(tag_number):
+def get_enum_str(tag_number, tag_value_len):
     enums = ""
     field = fields.find(f"./field[@number='{tag_number}']")
-    enum_padding = len(row_separator) - (tag_column_length + 3 + field_name_column_length + 3 + 1)
+    enum_padding = len(row_separator) - (tag_column_length + 3 + field_name_column_length + 3 + tag_value_len)
 
     if field:
         for i in range(enum_padding):
@@ -84,7 +84,7 @@ def make_readable(tags, output_file):
 
         enums = ""
         if print_enums:
-            enums = get_enum_str(tag_number)
+            enums = get_enum_str(tag_number, len(tag_value))
 
         line = tag_number + padding1 + " | " + tag_name + padding2 + " | " + tag_value + enums + "\n"
         output_file.write(line)
