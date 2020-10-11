@@ -3,6 +3,7 @@ import argparse
 import sys
 import xml.etree.ElementTree as ET
 
+
 class FIXParser:
     tag_column_length = 5
     field_name_column_length = 23
